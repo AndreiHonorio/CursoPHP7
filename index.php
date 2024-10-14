@@ -1,6 +1,7 @@
 <?php
 
 require_once("config.php");
+
  #==========================================================================================================
 
 #$sql = new Sql();
@@ -39,8 +40,31 @@ require_once("config.php");
 
 #Carrega um usuario com login e senha
 
+//$usuario = new Usuario();
+//$usuario->login("root","!@#$%");
+
+//echo $usuario;
+
+#============================================================================================================
+
+#Realização do INSERT
+
+/*
+$aluno = new Usuario();
+
+$aluno->setDeslogin("aluno");
+$aluno->setDessenha("@aluno");
+
+$aluno->insert();
+
+echo $aluno
+*/
+
 $usuario = new Usuario();
-$usuario->login("root","!@#$%");
+
+$usuario->loadById(1);
+
+$usuario->update("root", "euprofessor");
 
 echo $usuario;
 ?>
