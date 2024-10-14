@@ -60,6 +60,11 @@ $aluno->insert();
 echo $aluno
 */
 
+#============================================================================================================
+
+#Realiza alterção de login e senha
+
+/*
 $usuario = new Usuario();
 
 $usuario->loadById(1);
@@ -67,4 +72,14 @@ $usuario->loadById(1);
 $usuario->update("root", "euprofessor");
 
 echo $usuario;
+*/
+
+$usuario = new Usuario();
+
+$usuario->loadById(4);
+
+$usuario->delete();
+
+echo $usuario;
+
 ?>
